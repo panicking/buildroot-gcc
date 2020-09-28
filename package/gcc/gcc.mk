@@ -131,7 +131,7 @@ endif
 
 # libsanitizer requires wordexp, not in default uClibc config. Also
 # doesn't build properly with musl.
-ifeq ($(BR2_TOOLCHAIN_BUILDROOT_UCLIBC)$(BR2_TOOLCHAIN_BUILDROOT_MUSL),y)
+ifeq ($(BR2_TOOLCHAIN_BUILDROOT_MUSL),y)
 HOST_GCC_COMMON_CONF_OPTS += --disable-libsanitizer
 endif
 
